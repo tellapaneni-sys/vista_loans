@@ -12,6 +12,7 @@ import 'package:http/http.dart' as http;
 class CustomerApiService {
   static const String _baseUrl = 'https://api.vistaloans.in/api/customer';
 
+  /// Submit basic data and return the created/updated CustomerBasicRequest
   Future<CustomerBasicResponse> submitBasicData(
     CustomerBasicRequest request,
   ) async {
@@ -62,6 +63,7 @@ class CustomerApiService {
     }
   }
 
+  /// Submit KYC data and return the response as CustomerKycRequest
   Future<CustomerKycRequest> submitKyc({
     required CustomerKycRequest request,
   }) async {
